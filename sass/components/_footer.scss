@@ -16,11 +16,21 @@
         height: auto;
     }
 
-    a {
-        color: $color__light;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
+    .footer-nav {
+        .menu {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 2rem;
+            list-style-type: none;
+
+            a {
+                color: $color__light;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
