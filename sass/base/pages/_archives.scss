@@ -1,0 +1,53 @@
+.archive-page {
+    article {
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $color__background-hr;
+
+        header {
+            .entry-title {
+                margin-bottom: 0.5rem;
+                font-size: 2rem;
+                a {
+                    color: $color__dark;
+                    text-decoration: none;
+                    transition: .25s;
+                    &:hover {
+                        color: lighten($color__dark, 20%);
+                    }
+                }
+            }
+        }
+        .post-thumbnail {
+            img.attachment-medium.size-medium.wp-post-image {
+                @include border-radius();
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+        .entry-content {
+            display: flex;
+            gap: 1rem;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
+
+            .wp-block-embed {
+                display: none;
+            }
+            .post-excerpt {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                a {
+                    margin-top: auto;
+                    margin-bottom: .4rem;
+                }
+            }
+        }
+        footer {
+            // border: 1px solid darkgray;
+        }
+    }
+}
