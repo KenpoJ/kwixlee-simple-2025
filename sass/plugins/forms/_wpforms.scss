@@ -1,15 +1,17 @@
-.wpforms-container {
+.wpforms-container,
+.wpforms-container-full {
+    margin: 0 auto !important;
     padding: 2rem !important;
-    @include box-shadow();
-    background: $color__dark !important;
+    width: 80% !important;
+    box-shadow: 0, 0, 2.5rem, 0, rgba(123, 121, 121, 0.25);
     @include border-radius();
-    border: 2px solid $color__primary !important;
+    background: $color__light !important;
 
     form {
 
         legend,
         label {
-            color: $color__light !important;
+            color: $color__dark !important;
         }
         button {
             &.wpforms-submit {
