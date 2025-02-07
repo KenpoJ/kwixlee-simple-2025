@@ -1,0 +1,20 @@
+.post-navigation {
+    .nav-links {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        padding-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $color__background-hr;
+
+        a {
+            color: $color__dark;
+            text-decoration: none;
+            transition: 0.2s;
+
+            &:hover {
+                color: $color__primary;
+            }
+        }
+    }
+}

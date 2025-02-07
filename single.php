@@ -32,8 +32,8 @@ get_header();
 
 				the_post_navigation(
 					array(
-						'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'kwixlee_simple_2025' ) . '</span> <span class="nav-title">%title</span>',
-						'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'kwixlee_simple_2025' ) . '</span> <span class="nav-title">%title</span>',
+						'prev_text' => '<span class="nav-subtitle">' . esc_html__( '&#x21A9;', 'kwixlee_simple_2025' ) . '</span> <span class="nav-title">%title</span>',
+						'next_text' => '<span class="nav-subtitle">' . esc_html__( '&#x21AA;', 'kwixlee_simple_2025' ) . '</span> <span class="nav-title">%title</span>',
 					)
 				);
 
