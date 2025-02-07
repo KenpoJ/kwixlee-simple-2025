@@ -1,0 +1,19 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+@mixin box-shadow($color: rgba(123, 121, 121, 0.25), $x: 0, $y: 0, $blur: 2.5rem, $spread: 0) {
+	box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin border-radius($radius: 0.5rem) {
+	border-radius: $radius;
+}

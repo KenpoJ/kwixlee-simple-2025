@@ -1,0 +1,60 @@
+.video-showcase-home {
+    margin-top: 0 !important;
+    padding-top: 3rem;
+    // padding-bottom: 6rem;
+    text-align: center;
+    // background: url('/wp-content/uploads/2025/01/kwixlee-mark-faded.png') no-repeat -15% 20%;
+
+    // @media screen and (max-width: 1024px) {
+    //     background-position: center center;
+    //     background-size: cover;
+    // }
+
+    // @media screen and (max-width: 500px) {
+    //     background-position: center top;
+    //     background-size: cover;
+    // }
+
+    .btn {
+        margin-top: 1rem;
+        display: inline-block;
+    }
+}
+.cta-home {
+    background-color: $color__primary;
+    color: $color__light;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    a {
+        color: $color__light;
+        text-decoration: none;
+        &:hover {
+        text-decoration: underline;
+        }
+    }
+}
+
+.about {
+    .about-content {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+
+        .about-content_text {
+            flex: 0 1 70%;
+            padding: 1rem;
+            order: 1;
+        }
+        .about-content_image {
+            flex: 0 1 30%;
+            order: 2;
+            
+            img {
+                width: 100%;
+                height: auto;
+                @include border-radius();
+            }
+        }
+    }
+}

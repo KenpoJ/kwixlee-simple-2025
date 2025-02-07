@@ -1,0 +1,45 @@
+.testimonials-container {
+    .testimonials-description {
+        // font-size: 2rem;
+        // font-weight: bold;
+        // font-style: italic;
+        text-align: center;
+    }
+    .testimonials-media {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .testimonial-card {
+            padding: 1rem 1rem 1.5rem;
+            flex: 0 1 48%;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            @include box-shadow();
+            border: 1px solid $color__background-hr;
+            @include border-radius();
+
+            @media screen and (max-width: 768px) {
+                flex: 0 1 90%;
+            }
+
+            img {
+                width: auto;
+                height: 150px;
+                border-radius: 100%;
+            }
+            .testimonial-card-copy {
+                // border: 1px solid red;
+            }
+            .testimonial-card-name {
+                margin-bottom: 0;
+                // border: 1px solid green;
+            }
+            .testimonial-card-company {
+                margin-top: 0;
+                // border: 1px solid blue;
+            }
+        }
+    }
+}

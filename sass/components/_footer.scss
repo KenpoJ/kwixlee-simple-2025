@@ -1,0 +1,26 @@
+.site-footer {
+    margin-top: 2rem;
+    padding: 2rem 0;
+    color: $color__light;
+    background: $color__dark;
+
+    .content-container {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-logo {
+        width: 200px;
+        height: auto;
+    }
+
+    a {
+        color: $color__light;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

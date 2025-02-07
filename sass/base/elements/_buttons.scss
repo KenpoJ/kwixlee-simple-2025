@@ -1,0 +1,19 @@
+.btn {
+    padding: 0.5rem 1rem;
+    color: $color__light;
+    text-decoration: none;
+    background: lighten($color__dark, 10%);
+    @include border-radius();
+    transition: .25s;
+
+    &:hover {
+        background: $color__dark;
+    }
+}
+.btn-primary {
+    background: $color__primary;
+
+    &:hover {
+        background: darken($color__primary, 10%);
+    }
+}

@@ -1,0 +1,84 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+h1 {
+	margin-top: 4rem;
+	padding-left: 2rem;
+	font-family: $font__heading_large;
+	font-size: 3.5rem;
+	font-weight: 800;
+	position: relative;
+	line-height: 3.5rem;
+
+	&:before {
+		content: '';
+		display: block;
+		width: 1.75rem;
+		height: 2.5rem;
+		background-color: $color__primary;
+		position: absolute;
+		left: 0;
+		top: -1rem;
+		@include border-radius();
+	}
+}
+h2:not(.slider-x-lead-title) {
+	margin-bottom: 0;
+	padding-left: 2rem;
+	position: relative;
+	font-family: $font__heading_large;
+	font-size: 3rem;
+	line-height: 3rem;
+
+	&:before {
+		content: '';
+		display: block;
+		width: 1.75rem;
+		height: 2.5rem;
+		background-color: $color__primary;
+		position: absolute;
+		left: 0;
+		top: -1rem;
+		@include border-radius();
+	}
+}
+h3 {
+	font-family: $font__heading_regular;
+	font-size: 2.5rem;
+}
+h4 {
+	font-family: $font__heading_regular;
+	font-size: 2rem;
+}
+h5 {
+	font-family: $font__heading_regular;
+	font-size: 1.5rem;
+}
+h6 {
+	font-family: $font__heading_regular;
+	font-size: 1rem;
+}
+
+.banner-offers {
+	h3 {
+		font-size: 2rem;
+		color: $color__primary;
+	}
+}
+.samples-list {
+	position: relative;
+	h2{
+		margin: 0;
+		padding-left: 2rem;
+		font-size: 7rem;
+		color: $color__primary;
+	}
+}
+.card-title {
+	font-family: $font__heading_regular;
+}

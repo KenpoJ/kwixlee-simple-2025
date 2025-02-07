@@ -1,0 +1,96 @@
+header {
+    &.site-header {
+        border-bottom: 2px solid $color__primary;
+        background: url('/wp-content/uploads/2025/01/kwixlee-mark-faded.png') no-repeat 0 30%;
+
+        .content-container {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    .site-branding {
+        img {
+            width: auto;
+            height: 100px;
+        }
+    }
+}
+
+#site-navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .menu-primary-menu-container {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 1rem 0;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            display: none;
+        }
+
+        ul {
+            li {
+                display: inline-block;
+                margin-right: 1rem;
+
+                a {
+                    color: $color__dark;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: 0.3s;
+
+                    &:hover {
+                        color: $color__primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu-toggle {
+    width: 40px;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @media screen and (min-width: 769px) {
+        display: none;
+        
+    }
+}
+  
+.bar1, .bar2, .bar3 {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: $color__dark;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}

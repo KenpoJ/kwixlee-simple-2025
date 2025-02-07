@@ -1,0 +1,52 @@
+.video-samples-blog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .video-samples-blog-card {
+        flex: 0 1 48%;
+        @include box-shadow();
+        @include border-radius();
+        border: 1px solid $color__background-hr;
+
+        .card-image {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .card-content {
+            padding: 1rem;
+            text-align: center;
+
+            h3 {
+                margin: 0;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.pagination {
+    padding: 2rem;
+    text-align: center;
+
+    .page-numbers {
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        color: $color__primary;
+        border: 1px solid $color__primary;
+        border-radius: 4px;
+        transition: .25s;
+
+        &:hover {
+            color: $color__light;
+            background-color: lighten($color__primary, 20%);
+        }
+        &.current {
+            background-color: $color__primary;
+            color: $color__light;
+        }
+    }
+}

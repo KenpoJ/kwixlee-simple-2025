@@ -1,0 +1,9 @@
+.page-hero {
+    h2 {
+        &.slider-x-lead-title {
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
