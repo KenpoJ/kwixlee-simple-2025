@@ -13,9 +13,9 @@
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h2 class="entry-title">', '</h2>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
@@ -30,9 +30,22 @@
 	</header><!-- .entry-header -->
 	
 	<?php
-	if ( $post_type != 'video-sample' ) {
-		kwixlee_simple_2025_post_thumbnail();
-	}
+	if ( $post_type != 'video-sample' ) { 
+		$the_excerpt = get_the_excerpt();
+		?>
+		<div class="entry-content">
+			<!-- post thumbnail -->
+			<a href="<?php get_post_permalink(); ?>">
+				<?php echo get_the_post_thumbnail($post_ID, 'thumbnail'); ?>
+			</a>
+			<!-- post excerpt -->
+			 <div class="post-excerpt">
+				<?php echo $the_excerpt; ?>
+				<a class="btn btn-primary" href="<?php echo get_post_permalink(); ?>">Read More</a>
+			</div>
+		</div><!-- .entry-content -->
+	<?php	
+	} else {
 	?>
 
 	<div class="entry-content">
@@ -60,6 +73,9 @@
 		);
 		?>
 	</div><!-- .entry-content -->
+	<?php
+	}
+	?>
 
 	<footer class="entry-footer">
 		<?php kwixlee_simple_2025_entry_footer(); ?>
