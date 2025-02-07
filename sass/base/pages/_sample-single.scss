@@ -1,0 +1,17 @@
+article.video-sample {
+    .entry-content {
+        .wp-block-embed__wrapper {
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-top: 56.25%;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
