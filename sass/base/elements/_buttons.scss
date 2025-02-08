@@ -1,3 +1,13 @@
+a {
+    color: $color__dark;
+    text-decoration: none;
+    transition: .25s;
+
+    &:hover {
+        color: $color__primary;
+    }
+}
+
 .btn {
     padding: 0.5rem 1rem;
     color: $color__light;
