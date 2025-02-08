@@ -17,12 +17,28 @@
             }
         }
         .card-content {
-            padding: 1rem;
+            padding: 1rem 1rem 2rem;
             text-align: center;
 
             h3 {
                 margin: 0;
                 font-size: 1.5rem;
+            }
+        }
+        .tags {
+            margin-top: 1rem;
+
+            a {
+                padding: 0.5rem 1rem;
+                color: $color__primary;
+                text-decoration: none;
+                border: 1px solid $color__primary;
+                @include border-radius(1.25rem);
+                transition: .2s;
+
+                &:hover {
+                    border-width: 2px;
+                }
             }
         }
     }
