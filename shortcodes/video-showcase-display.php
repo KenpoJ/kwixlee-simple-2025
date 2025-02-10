@@ -35,7 +35,8 @@ function video_showcase_home_shortcode ( $atts, $content = null ) {
     // The Query Arguments.
     $args = array(
         'post_type' => $post_type,
-        'posts_per_page' => $limit
+        'posts_per_page' => $limit,
+        'category_name' => 'featured'
     );
     // The Query.
     $video_samples = new WP_Query( $args );
