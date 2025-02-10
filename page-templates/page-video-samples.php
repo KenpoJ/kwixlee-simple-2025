@@ -26,7 +26,7 @@
                 $image_link = get_the_post_thumbnail_url(get_the_ID(), 'large');
                 $image_link = wp_make_link_relative($image_link);
 
-                $posttags = get_the_tag_list('', ', ');
+                $posttags = get_the_tag_list('', ' ');
 
                 $card_markup .= '<div class="video-samples-blog-card">';
                 $card_markup .= '<a href="'.get_permalink().'">';
