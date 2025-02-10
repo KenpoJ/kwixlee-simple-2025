@@ -21,12 +21,28 @@
     }
 }
 .cta-home {
-    background-color: $color__primary;
-    color: $color__light;
-    padding: 1rem;
-    text-align: center;
     margin-top: 1rem;
+    padding: 3rem 0 12rem;
+    color: $color__light;
+    text-align: center;
+    background: url('/wp-content/uploads/2025/02/cta-background.jpg') no-repeat 20% center / cover;
+
+    h2 {
+        margin: 0;
+        text-align: center;
+    }
+    h3 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    p {
+        margin: 0 auto;
+        max-width: 80%;
+        font-size: 1.25rem;
+    }
     a {
+        margin-top: 2rem;
+        display: inline-block;
         color: $color__light;
         text-decoration: none;
         &:hover {
