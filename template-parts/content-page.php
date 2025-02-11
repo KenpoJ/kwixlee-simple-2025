@@ -8,11 +8,22 @@
  */
 
 ?>
-content-page
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
+
+	<?php if(is_page(59)) { ?>
+		<div class="about-content">
+			<div class="about-content_image">
+				<?php echo get_the_post_thumbnail($post_ID = 59, 'medium'); ?>
+			</div>
+			<div class="about-content_text">
+				<?php the_content(); ?>
+			</div>
+		</div>
+	<?php } else { ?>
 
 	<?php kwixlee_simple_2025_post_thumbnail(); ?>
 
@@ -28,6 +39,7 @@ content-page
 		);
 		?>
 	</div><!-- .entry-content -->
+	<?php } ?>
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
