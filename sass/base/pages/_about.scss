@@ -1,3 +1,20 @@
+.about-content {
+    .about-content_image {
+        float: left;
+        margin-right: 2rem;
+        margin-bottom: 1.5rem;
+        max-width: 50%;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        @media screen and (max-width: 768px) {
+            float: none;
+            margin-right: 0;
+            max-width: 100%;
+        }
+    }
+}
 .about-content_text {
     .process-list {
         margin: 0 auto;
@@ -21,7 +38,7 @@
             .wp-block-list {
                 margin-left: 1rem;
                 list-style-type: none;
-                
+
                 li {
                     font-weight: normal;
                     font-size: 1.25rem;
