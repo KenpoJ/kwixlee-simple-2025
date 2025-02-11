@@ -72,5 +72,9 @@
                 @include border-radius();
             }
         }
+        .btn {
+            margin-top: 1rem;
+            display: inline-block;
+        }
     }
 }

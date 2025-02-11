@@ -35,6 +35,7 @@
             <div class="about-content_text">
                 <?php $excerpt = get_the_excerpt($post_ID = 59); ?>
                 <?php echo $excerpt; ?>
+                <a class="btn btn-primary" href="/about">Learn More About Kwixlee</a>
             </div>
         </div>
     </div>
