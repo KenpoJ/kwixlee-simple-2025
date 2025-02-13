@@ -21,7 +21,7 @@
         <h2>Submitting to Festivals?</h2>
         <h3>Get your film's trailer right</h3>
         <p>Make sure your submission stands out with a trailer that captivates audiences and festival judges alike. <br>Download for <strong>free Trailer-Ready: Your Complete Guide to Prepping Your Film</strong> with information on how to prepare your film and materials for a trailer editor.</p>
-        <a class="btn" href="/subscribe">Get the Guide</a>
+        <a class="btn" href="#wow-modal-id-1">Get the Guide</a>
     </div>
 </section>
 
