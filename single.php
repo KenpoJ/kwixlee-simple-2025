@@ -17,7 +17,7 @@ get_header();
 
 			if($post_type == 'video-sample') {
 				$return_btn = '<section>';
-				$return_btn .= '<a class="btn btn-primary" href="/video-editing-samples">Return to Video Showcase</a>';
+				$return_btn .= '<a class="btn btn-primary" href="/video-showcase">Return to Video Showcase</a>';
 				$return_btn .= '</section>';
 				echo $return_btn;
 			}
