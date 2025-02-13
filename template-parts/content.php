@@ -50,6 +50,32 @@
 
 	<div class="entry-content">
 		<?php
+		// display post categories
+		$categories = get_the_category();
+		?>
+		<div class="categories">
+			<span>Categories: </span>
+			<?php
+			if ($categories) {
+				foreach($categories as $category) {
+					// $featuredClass = '';
+					// ($category->name != 'Featured') ? $featuredClass = 'featuredClass' : $featuredClass = '';
+					// echo '<span class="category '.$featuredClass.'">'.$category->name.'</span>'; 
+					echo '<span class="category">'.$category->name.'</span>'; 
+				}
+			}
+			?>
+		</div>
+		<?php
+		// display post tags
+		$posttags = get_the_tag_list('', ' ');
+		?>
+		<div class="post-tags">
+			<?php
+			echo $posttags;
+			?>
+		</div>
+		<?php
 		the_content(
 			sprintf(
 				wp_kses(
@@ -64,6 +90,28 @@
 				wp_kses_post( get_the_title() )
 			)
 		);
+
+		// display custom fields
+		$project_name = get_field('project_name');
+		$genre = get_field('genre');
+		$notes = get_field('notes');
+		$starring = get_field('starring');
+		$year_released = get_field('year_released');
+		$print_year = '';
+		($year_released) ? $print_year = ' ('.$year_released.')' : $print_year = '';
+
+		if ($project_name) {
+			echo '<div class="project-name"><strong>Project Name</strong>: '.$project_name.''.$print_year.'</div>';
+		}
+		if ($genre) {
+			echo '<div class="genre"><strong>Genre</strong>: '.$genre.'</div>';
+		}
+		if ($starring) {
+			echo '<div class="starring"><strong>Starring</strong>: '.$starring.'</div>';
+		}
+		if ($notes) {
+			echo '<div class="notes"><strong>Notes</strong>: '.$notes.'</div>';
+		}
 
 		wp_link_pages(
 			array(

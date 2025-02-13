@@ -1,5 +1,29 @@
 article.video-sample {
     .entry-content {
+        .post-tags,
+        .categories {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            .tag,
+            .category {
+                margin-right: 0.5rem;
+            }
+        }
+        .category {
+            margin-right: 1rem;
+            display: inline-block;
+            font-weight: bold;
+        }
+        .post-tags {
+            a {
+                padding: .2rem .5rem;
+                border: 1px solid $color__dark;
+                @include border-radius();
+                &:hover {
+                    border-color: $color__primary;
+                }
+            }
+        }
         .wp-block-embed__wrapper {
             margin-top: 3rem;
             margin-bottom: 2rem;
