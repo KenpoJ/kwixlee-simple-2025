@@ -88,7 +88,7 @@ function video_showcase_home_shortcode ( $atts, $content = null ) {
     $markup .= '<div class="video-samples-display-media">';
     $markup .= $samples_markup;
     $markup .= '</div>';
-    $markup .= '<a class="btn btn-primary" href="/video-editing-samples">View Video Showcase</a>';
+    $markup .= '<a class="btn btn-primary" href="/video-showcase">View Video Showcase</a>';
     $markup .= '</div></div>';
 
     return $markup;
