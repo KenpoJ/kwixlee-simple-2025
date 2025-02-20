@@ -6,13 +6,11 @@ body {
 
 header {
     &.site-header {
-        // border: 1px solid red;
     }
 }
 
 main {
     &.site-main {
-        // background: url('/wp-content/uploads/2025/01/kwixlee-mark-faded.png') no-repeat center center/cover;
     }
 }
 
@@ -24,7 +22,6 @@ section {
 .content-container {
     margin: 0 auto;
     max-width: 1160px;
-    // border: 1px solid darkgray;
 
     @media screen and (max-width: 1159px) {
         width: 90%;
@@ -33,6 +30,5 @@ section {
 
 footer {
     &.site-footer {
-        // border: 1px solid green;
     }
 }
