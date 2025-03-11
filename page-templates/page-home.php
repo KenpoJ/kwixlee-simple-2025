@@ -19,22 +19,22 @@
 <section class="cta cta-home">
     <div class="content-container">
         <h2>Submitting to Festivals?</h2>
-        <h3>Get your film's trailer right</h3>
-        <p>Make sure your submission stands out with a trailer that captivates audiences and festival judges alike. <br>Download for <strong>free Trailer-Ready: Your Complete Guide to Prepping Your Film</strong> with information on how to prepare your film and materials for a trailer editor.</p>
+        <h3>Get your film trailer right</h3>
+        <p>Make sure your submission stands out with a trailer that captivates audiences and festival judges alike. <br>Download the free guide <strong>Trailer-Ready: Your Complete Guide to Prepping Your Film</strong> with information on how to prepare your film and materials for a trailer editor.</p>
         <a class="btn" href="#wow-modal-id-1">Get the Guide</a>
     </div>
 </section>
 
 <section class="about">
     <div class="content-container">
-        <h2>About</h2>
+        <h2>About Kwixlee Digital Video Editing</h2>
         <div class="about-content">
             <div class="about-content_image">
                 <?php echo get_the_post_thumbnail($post_ID = 59, 'medium'); ?>
             </div>
             <div class="about-content_text">
                 <?php $excerpt = get_the_excerpt($post_ID = 59); ?>
-                <?php echo $excerpt; ?>
+                <?php echo $excerpt; ?><br>
                 <a class="btn btn-primary" href="/about">Learn More About Kwixlee</a>
             </div>
         </div>
