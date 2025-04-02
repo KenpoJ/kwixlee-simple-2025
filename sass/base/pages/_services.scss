@@ -1,0 +1,38 @@
+.service-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    @include box-shadow();
+    @include border-radius();
+    border: 1px solid $color__background-hr;
+
+    .service-title {
+        margin-top: 0;
+        margin-bottom: 1rem;;
+        flex-shrink: 1;
+        font-size: 2em;
+        color: $color__primary;
+        text-align: center;
+    }
+    p {
+        padding: 0 1rem;
+        flex-shrink: 1;
+    }
+    .service-price {
+        margin-top: auto;
+        font-size: 1.5em;
+        color: $color__primary;
+        text-align: center;
+    }
+}
+.wp-block-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 1rem;
+    background: $color__background-screen;
+
+    th, td {
+        padding: 0.5rem;
+    }
+}
