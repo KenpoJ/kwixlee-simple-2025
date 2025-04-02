@@ -27,7 +27,8 @@ h1 {
 		@include border-radius();
 	}
 }
-h2:not(.slider-x-lead-title) {
+h2:not(.slider-x-lead-title),
+h2:not(.h2-basic) {
 	margin-bottom: 0;
 	padding-left: 2rem;
 	position: relative;
@@ -45,6 +46,14 @@ h2:not(.slider-x-lead-title) {
 		left: 0;
 		top: -1rem;
 		@include border-radius();
+	}
+}
+.h2-basic {
+	margin-bottom: 1rem !important;
+	padding-left: 0 !important;
+	
+	&:before {
+		display: none !important;
 	}
 }
 h3 {
