@@ -13,6 +13,14 @@
         label {
             color: $color__dark !important;
         }
+        // label {
+        //     &:has(+input:required) {
+                label:has(+ input:required):after {
+                    content: ' *' !important;
+                    color: $color__primary !important;
+                }
+        //     }
+        // }
         button {
             &.wpforms-submit {
                 width: 100% !important;
