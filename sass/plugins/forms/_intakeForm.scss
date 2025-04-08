@@ -1,0 +1,61 @@
+.project-intake {
+    .wpforms-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        justify-content: center;
+
+        fieldset {
+            padding-top: 3.5rem;
+            flex: 1 1 45%;
+            position: relative;
+            background: lighten($color__light, 3%);
+            @include border-radius();
+            border: 0;
+
+            @media screen and (max-width: 768px) {
+                flex: 1 1 100%;
+            }
+
+            legend {
+                margin-bottom: 0.5rem;
+                position: absolute;
+                top: .5rem;
+                font-family: $font__heading_regular;
+                font-size: 1.5em;
+                color: $color__primary;
+            }
+            label {
+                font-weight: bold;
+            }
+            label:has(input:required) {
+                &:before {
+                    content: "* ";
+                    color: $color__primary;
+                }
+            }
+            input:not([type="checkbox"]),
+            textarea {
+                margin-bottom: 0.5rem;
+                padding: 0.5rem;
+                width: 100%;
+                border: 1px solid $color__background-hr;
+                @include border-radius();
+                background: lighten($color__light, 3%);
+            }
+        }
+        button {
+            &.wpforms-submit {
+                width: 75% !important;
+                border: 0;
+                font-weight: bold;
+                text-transform: uppercase;
+
+                &:hover {
+                    background: darken($color__primary, 10%);
+                }
+            }
+        }
+    }
+}
+
