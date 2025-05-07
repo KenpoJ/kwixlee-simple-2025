@@ -176,7 +176,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-
 function video_samples_blog_taxonomy_queries( $query ) {
     if ( ( $query->is_category() || $query->is_tag() )
         && $query->is_main_query() ) {
@@ -185,14 +184,64 @@ function video_samples_blog_taxonomy_queries( $query ) {
 }
 add_action( 'pre_get_posts', 'video_samples_blog_taxonomy_queries' );
 
+function project_intake_handler() {
+	// if ( is_page_template( 'page-templates/page-project-intake.php' ) ) {
+	// 	echo 'Here is the project intake form.';
+	// 	return;
+	// }
+
+	if ( $_SERVER['REQUEST_METHOD'] !== 'POST' ) {
+		return;
+	}
+
+	// Sanitize and validate form data
+	$name = isset($_POST['name']) ? sanitize_text_field($_POST['name']) : '';
+	$address = isset($_POST['address']) ? sanitize_text_field($_POST['address']) : '';
+	$city = isset($_POST['city']) ? sanitize_text_field($_POST['city']) : '';
+	$state = isset($_POST['state']) ? sanitize_text_field($_POST['state']) : '';
+	$zip = isset($_POST['zip']) ? sanitize_text_field($_POST['zip']) : '';
+	$phone = isset($_POST['phone']) ? sanitize_text_field($_POST['phone']) : '';
+	$email = isset($_POST['email']) ? sanitize_email($_POST['email']) : '';
+	$company_name = isset($_POST['company_name']) ? sanitize_text_field($_POST['company_name']) : '';
+	$company_address = isset($_POST['company_address']) ? sanitize_text_field($_POST['company_address']) : '';
+	$company_city = isset($_POST['company_city']) ? sanitize_text_field($_POST['company_city']) : '';
+	$company_state = isset($_POST['company_state']) ? sanitize_text_field($_POST['company_state']) : '';
+	$company_zip = isset($_POST['company_zip']) ? sanitize_text_field($_POST['company_zip']) : '';
+	$company_phone = isset($_POST['company_phone']) ? sanitize_text_field($_POST['company_phone']) : '';
+	$company_email = isset($_POST['company_email']) ? sanitize_email($_POST['company_email']) : '';
+	$project_title = isset($_POST['project_title']) ? sanitize_text_field($_POST['project_title']) : '';
+	$description = isset($_POST['description']) ? sanitize_textarea_field($_POST['description']) : '';
+
+	if ( empty( $name ) || empty( $email ) || empty( $project_title ) ) {
+		wp_die( __( 'Please fill in all required fields.', 'kwixlee_simple_2025' ) );
+	}
+	wp_safe_redirect( home_url( '/project-intake-form-submitted/' ) );
+
+	// Process the form data (e.g., save to database, send email, etc.)
+	echo $name . '<br>';
+	echo $address . '<br>';
+	echo $city . '<br>';
+	echo $state . '<br>';
+	echo $zip . '<br>';
+	echo $phone . '<br>';
+	echo $email . '<br>';
+	
+	// Example: Send an email notification
+}
+
+function submit_project_intake() {
+	project_intake_handler();
+}
+add_action( 'template_redirect', 'submit_project_intake', 2 );
+
 
 /**
  * Load custom shortcodes.
  */
 include_once('shortcodes/video-showcase-display.php');
 include_once('shortcodes/testimonials_shortcode.php');
-// include_once('shortcodes/project-intake-form.php');
+include_once('shortcodes/project_intake_form_shortcode.php');
 
 add_shortcode('video_samples_display', 'video_showcase_home_shortcode');
 add_shortcode('testimonials', 'testimonal_posts_display_shortcode');
-// add_shortcode('project_intake_form', 'project_intake_form_shortcode');
+add_shortcode('project_intake_form', 'project_intake_form_shortcode');
