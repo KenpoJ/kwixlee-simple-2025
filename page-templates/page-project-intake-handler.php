@@ -17,6 +17,7 @@ https://wpmudev.com/blog/handling-form-submissions/
 <section class="submitted-intake">
     <div class="content-container">
         <?php
+        project_intake_handler();
         //Handle the form in the functions.php file
         echo $name;
         ?>

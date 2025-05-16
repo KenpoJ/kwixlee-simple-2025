@@ -189,6 +189,7 @@ function project_intake_handler() {
 	// 	echo 'Here is the project intake form.';
 	// 	return;
 	// }
+	// echo 'Hello from the project intake handler.';
 
 	if ( $_SERVER['REQUEST_METHOD'] !== 'POST' ) {
 		return;
@@ -212,10 +213,9 @@ function project_intake_handler() {
 	$project_title = isset($_POST['project_title']) ? sanitize_text_field($_POST['project_title']) : '';
 	$description = isset($_POST['description']) ? sanitize_textarea_field($_POST['description']) : '';
 
-	if ( empty( $name ) || empty( $email ) || empty( $project_title ) ) {
-		wp_die( __( 'Please fill in all required fields.', 'kwixlee_simple_2025' ) );
-	}
-	wp_safe_redirect( home_url( '/project-intake-form-submitted/' ) );
+	// if ( empty( $name ) || empty( $email ) || empty( $project_title ) ) {
+	// 	wp_die( __( 'Please fill in all required fields.', 'kwixlee_simple_2025' ) );
+	// }
 
 	// Process the form data (e.g., save to database, send email, etc.)
 	echo $name . '<br>';
@@ -225,6 +225,8 @@ function project_intake_handler() {
 	echo $zip . '<br>';
 	echo $phone . '<br>';
 	echo $email . '<br>';
+
+	wp_safe_redirect( home_url( '/project-intake-form-submitted/' ) );
 	
 	// Example: Send an email notification
 }
