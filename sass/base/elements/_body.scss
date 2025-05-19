@@ -32,3 +32,15 @@ footer {
     &.site-footer {
     }
 }
+
+.wp-block-columns {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid $color__primary;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.reverse-mobile {
+    @media screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+    }
+}
