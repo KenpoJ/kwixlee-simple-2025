@@ -60,6 +60,69 @@ header {
             }
         }
     }
+    .menu-item-has-children {
+        position: relative;
+
+        &:hover .sub-menu {
+            display: block;
+        }
+    }
+    .menu-item-has-children > a {
+        position: relative;
+        padding-right: 20px;
+
+        &:after {
+            content: '▼';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8rem;
+            color: $color__dark;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+    .menu-item-has-children > a:hover {
+        color: $color__primary;
+    }
+    .sub-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 15rem;
+        z-index: 100;
+        background-color: $color__light;
+        padding: 1rem;
+        display: none;
+        @include box-shadow();
+
+        @media screen and (max-width: 768px) {
+            position: static;
+            width: 100%;
+            padding: 0;
+            display: block;
+            background-color: transparent;
+        }
+
+        li {
+            display: block;
+            margin-bottom: 0.5rem;
+
+            a {
+                color: $color__dark;
+                text-decoration: none;
+                font-weight: 600;
+                transition: 0.3s;
+
+                &:hover {
+                    color: $color__primary;
+                }
+            }
+        }
+    }
 }
 
 .menu-toggle {
