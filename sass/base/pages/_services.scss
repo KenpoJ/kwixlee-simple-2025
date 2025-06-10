@@ -36,3 +36,18 @@
         padding: 0.5rem;
     }
 }
+.wp-block-media-text {
+    margin-bottom: 1.4rem;
+    grid-template-columns: 40% 1fr;
+    align-items: start;
+
+    .wp-block-media-text__content {
+        align-self: start;
+    }
+    .wp-block-media-text__media {
+        align-self: start !important;
+    }
+    h4 {
+        font-size: 1.4rem;
+    }
+}

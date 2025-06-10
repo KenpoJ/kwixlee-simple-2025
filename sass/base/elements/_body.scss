@@ -38,6 +38,12 @@ footer {
     border-bottom: 2px solid $color__primary;
     padding-top: 2rem;
     padding-bottom: 2rem;
+
+    &.no-border {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
 }
 .reverse-mobile {
     @media screen and (max-width: 768px) {
