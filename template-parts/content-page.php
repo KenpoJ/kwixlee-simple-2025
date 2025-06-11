@@ -28,7 +28,7 @@
 		</div>
 	<?php } else { ?>
 
-	<?php kwixlee_simple_2025_post_thumbnail(); ?>
+	<?php //kwixlee_simple_2025_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
