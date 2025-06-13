@@ -6,6 +6,12 @@ a {
     &:hover {
         color: $color__primary;
     }
+    &.btn-primary {
+        color: $color__light;
+    }
+    &.btn-primary:hover {
+        color: $color__light;
+    }
 }
 
 .btn {
