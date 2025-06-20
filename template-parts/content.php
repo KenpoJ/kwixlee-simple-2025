@@ -52,6 +52,9 @@
 		<?php
 		// display post categories
 		$categories = get_the_category();
+		$stripped_categories = array_map(function($category) {
+			return $category->name;
+		}, $categories);
 		?>
 		<div class="categories">
 			<span>Categories: </span>
@@ -113,12 +116,30 @@
 			echo '<div class="notes"><strong>Notes</strong>: '.$notes.'</div>';
 		}
 
+		$variable_cta = '';
+
+		if (in_array('Trailer', $stripped_categories)) {
+			$variable_cta = '<section class="video-cta">';
+			$variable_cta .= 'This is the content of the trailer cta section.';
+			$variable_cta .= '</section>';
+		} else if (in_array('Short Film', $stripped_categories)) {
+			$variable_cta = '<section class="video-cta">';
+			$variable_cta .= 'This is the content of the short film cta section.';
+			$variable_cta .= '</section>';
+		} else {
+			$variable_cta = '<section class="video-cta">';
+			$variable_cta .= 'This is the content of the general cta section.';
+			$variable_cta .= '</section>';
+		}
+		echo $variable_cta;
+
 		wp_link_pages(
 			array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kwixlee_simple_2025' ),
 				'after'  => '</div>',
 			)
 		);
+
 		?>
 	</div><!-- .entry-content -->
 	<?php
